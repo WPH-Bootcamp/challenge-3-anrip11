@@ -1,16 +1,64 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Assignment 3 - Landing Page</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/inter-ui@3.19.3/inter.min.css"
+      rel="stylesheet"
+    />
     <link href="./output.css" rel="stylesheet" />
+    <title>Assignment 3 - Landing Page</title>
+    <style type="text/tailwindcss"></style>
   </head>
-  <body>
+  <body class="text-white">
     <!-- ========== NAVBAR ========== -->
+    <header class="nav-header">
+      <nav class="nav-container container-custom">
+        <div class="nav-logo">
+          <span>Tech.</span>
+        </div>
 
-    <!-- ========== HERO SECTION ========== -->
+        <div class="menu">
+          <a href="#who-we-are" class="nav-link">About</a>
+          <a href="#what-we-do" class="nav-link">Service</a>
+          <a href="#our-work" class="nav-link">Our Work</a>
+          <a href="#met-the-team" class="nav-link">Team</a>
+        </div>
 
+        <div class="contact">
+          <a href="#contact" class="btn-contact">Contact Us</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ========== HERO SECTION ========== -->
+      <section class="hero">
+        <div class="hero-container container-custom">
+          <div class="hero-content">
+            <h1>
+              Build with the <em class="italic text-gray-200">Future.</em>
+            </h1>
+            <p>
+              From building sleek websites and mobile apps to integrating AI
+              solutions, we help brands turn ideas into powerful digital
+              experiences.
+            </p>
+            <a href="#">Let's Talk</a>
+          </div>
+
+          <div class="hero-image">
+            <img
+              src="../assets/images/hand.png"
+              alt="Hand Phone"
+              class="w-full h-auto block"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- ========== FOOTER ========== -->
   </body>
 </html>

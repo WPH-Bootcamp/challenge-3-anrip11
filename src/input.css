@@ -1,1 +1,80 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme {
+  /* Global Font */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  /* Variabel Warna */
+  --color-primary: #421abc;
+  --color-base-1: #ffffff;
+  --color-base-2: #000000;
+
+  /* Gray Scale & Accents */
+  --color-gray-50: #f9fafb;
+  --color-gray-200: #e5e7eb;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+}
+
+@layer components {
+  .container-custom {
+    @apply mx-auto w-full max-w-[1440px] px-5 lg:px-[140px];
+  }
+  /* ============== HEADER ============== */
+
+  /* ===== NAVBAR ===== */
+  .nav-header {
+    @apply w-full bg-black h-[84px] flex items-center;
+  }
+  .nav-container {
+    @apply flex justify-between items-center w-full;
+  }
+  .nav-logo {
+    @apply flex items-center justify-center w-[160px] h-[36px];
+  }
+  .nav-logo span {
+    @apply text-2xl font-bold text-gray-50;
+  }
+  .menu {
+    @apply hidden md:flex gap-1.5;
+  }
+  .nav-link {
+    @apply px-4 py-2 text-sm text-gray-50;
+  }
+  .contact {
+    @apply hidden md:block;
+  }
+  .btn-contact {
+    @apply flex items-center justify-center w-[160px] h-[44px] bg-primary text-gray-50 rounded-full text-sm font-semibold transition;
+  }
+  .hamburger-btn {
+    @apply md:hidden cursor-pointer;
+  }
+  .hamburger-btn {
+    @apply md:hidden cursor-pointer;
+  }
+  /* ===== HERO ===== */
+  .hero {
+    @apply relative w-full min-h-[720px] md:h-[750px] bg-gradient-to-b from-black to-[#210a5e] overflow-hidden pt-10 md:pt-0 flex items-center;
+  }
+  .hero-container {
+    @apply flex flex-col md:flex-row justify-between items-center relative h-full w-full;
+  }
+  .hero-content {
+    @apply max-w-[687px] z-10 text-center md:text-left;
+  }
+  .hero-content h1 {
+    @apply text-4xl md:text-[56px] font-bold leading-tight md:leading-[68px] mb-4 tracking-tight;
+  }
+  .hero-content p {
+    @apply text-base md:text-xl text-gray-400 leading-relaxed mb-8 md:mb-12;
+  }
+  .hero-content a {
+    @apply inline-flex items-center justify-center w-full md:w-[300px] h-12 bg-primary rounded-full font-semibold;
+  }
+  .hero-image {
+    @apply w-full max-w-[595px] mt-8 md:mt-0 self-end flex items-end;
+  }
+}
