@@ -27,8 +27,37 @@
           <a href="#met-the-team" class="nav-link">Team</a>
         </div>
 
-        <div class="contact">
+        <div class="contact-btn">
           <a href="#contact" class="btn-contact">Contact Us</a>
+        </div>
+
+        <div class="hamburger-btn" id="hamburger-btn">
+          <img
+            src="../assets/images/hamburger-icon.png"
+            alt="menu"
+            class="hamburger-icon"
+          />
+        </div>
+
+        <div id="mobile-menu">
+          <div class="mobile-nav-container">
+            <span class="text-2xl font-bold text-gray-50">Tech.</span>
+            <div
+              id="close-btn"
+              class="w-[24px] h-[24px] text-gray-50 cursor-pointer"
+            >
+              ✕
+            </div>
+          </div>
+
+          <div class="mobile-link-wrapper">
+            <a href="#who-we-are" class="mobile-link">About</a>
+            <a href="#what-we-do" class="mobile-link">Service</a>
+            <a href="#our-work" class="mobile-link">Our Work</a>
+            <a href="#met-the-team" class="mobile-link">Team</a>
+
+            <a href="#contact" class="btn-mobile-contact">Contact Us</a>
+          </div>
         </div>
       </nav>
     </header>
@@ -255,6 +284,7 @@
         </div>
       </section>
 
+      <!-- ========== CONTACT ========== -->
       <section class="contact" id="contact">
         <div class="contact-container container-custom">
           <div class="contact-title">
@@ -287,5 +317,31 @@
     <footer class="footer-container">
       <p>© 2025 Web Programming Hack. All rights reserved.</p>
     </footer>
+    <script>
+      const btnOpen = document.getElementById('hamburger-btn');
+      const btnClose = document.getElementById('close-btn');
+      const menu = document.getElementById('mobile-menu');
+      const links = document.querySelectorAll('.mobile-link');
+
+      // Membuka menu
+      btnOpen.onclick = () => {
+        menu.classList.add('active'); // Menambah class active
+        document.body.style.overflow = 'hidden';
+      };
+
+      // Menutup menu
+      btnClose.onclick = () => {
+        menu.classList.remove('active'); // Menghapus class active
+        document.body.style.overflow = 'auto';
+      };
+
+      // Menutup menu saat link diklik
+      links.forEach((l) => {
+        l.onclick = () => {
+          menu.classList.remove('active');
+          document.body.style.overflow = 'auto';
+        };
+      });
+    </script>
   </body>
 </html>
