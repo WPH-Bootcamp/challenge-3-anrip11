@@ -1,16 +1,347 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Assignment 3 - Landing Page</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/inter-ui@3.19.3/inter.min.css"
+      rel="stylesheet"
+    />
     <link href="./output.css" rel="stylesheet" />
+    <title>Assignment 3 - Landing Page</title>
+    <style type="text/tailwindcss"></style>
   </head>
   <body>
     <!-- ========== NAVBAR ========== -->
+    <header class="nav-header">
+      <nav class="nav-container container-custom">
+        <div class="nav-logo">
+          <span>Tech.</span>
+        </div>
 
-    <!-- ========== HERO SECTION ========== -->
+        <div class="menu">
+          <a href="#who-we-are" class="nav-link">About</a>
+          <a href="#what-we-do" class="nav-link">Service</a>
+          <a href="#our-work" class="nav-link">Our Work</a>
+          <a href="#met-the-team" class="nav-link">Team</a>
+        </div>
+
+        <div class="contact-btn">
+          <a href="#contact" class="btn-contact">Contact Us</a>
+        </div>
+
+        <div class="hamburger-btn" id="hamburger-btn">
+          <img
+            src="../assets/images/hamburger-icon.png"
+            alt="menu"
+            class="hamburger-icon"
+          />
+        </div>
+
+        <div id="mobile-menu">
+          <div class="mobile-nav-container">
+            <span class="text-2xl font-bold text-gray-50">Tech.</span>
+            <div
+              id="close-btn"
+              class="w-[24px] h-[24px] text-gray-50 cursor-pointer"
+            >
+              ✕
+            </div>
+          </div>
+
+          <div class="mobile-link-wrapper">
+            <a href="#who-we-are" class="mobile-link">About</a>
+            <a href="#what-we-do" class="mobile-link">Service</a>
+            <a href="#our-work" class="mobile-link">Our Work</a>
+            <a href="#met-the-team" class="mobile-link">Team</a>
+
+            <a href="#contact" class="btn-mobile-contact">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ========== HERO SECTION ========== -->
+      <section class="hero">
+        <div class="hero-container container-custom">
+          <div class="hero-content">
+            <h1 class="text-h1">
+              Build with the <em class="italic">Future.</em>
+            </h1>
+            <p>
+              From building sleek websites and mobile apps to integrating AI
+              solutions, we help brands turn ideas into powerful digital
+              experiences.
+            </p>
+            <a href="#">Let's Talk</a>
+          </div>
+
+          <div class="hero-image">
+            <img src="../assets/images/hand.png" alt="Hand Phone" />
+          </div>
+        </div>
+      </section>
+      <!-- ========== WHO WE ARE ========== -->
+      <section class="who-we-are" id="who-we-are">
+        <div class="who-we-are-container container-custom">
+          <h2 class="text-h2">Who We Are</h2>
+          <h3 class="text-h3">
+            <span>We're a group of tech students trained in</span>
+            building real-world digital products<span>.</span><br />
+            <span>From coding to design, we</span> craft modern solutions for
+            modern problems<span>.</span>
+          </h3>
+        </div>
+      </section>
+
+      <!-- ========== WHAT WE DO ========== -->
+      <section class="what-we-do" id="what-we-do">
+        <div class="container-custom">
+          <div class="container-title">
+            <h2 class="text-h2">What We Do</h2>
+            <p class="text-sub">
+              We offer simple tech solutions to help your ideas grow.
+            </p>
+          </div>
+
+          <div class="service">
+            <div class="card-service">
+              <img
+                src="../assets/images/Website.png"
+                alt="Web"
+                class="card-icon"
+              />
+              <div>
+                <p class="title-card">Web Development</p>
+                <p class="title-content">
+                  Modern websites using HTML, CSS, JavaScript, and frameworks.
+                </p>
+              </div>
+            </div>
+            <div class="card-service">
+              <img
+                src="../assets/images/Mobile.png"
+                alt="Web"
+                class="card-icon"
+              />
+              <div>
+                <p class="title-card">App Development</p>
+                <p class="title-content">
+                  Mobile and desktop apps tailored for your needs.
+                </p>
+              </div>
+            </div>
+            <div class="card-service">
+              <img src="../assets/images/AI.png" alt="Web" class="card-icon" />
+              <div>
+                <p class="title-card">AI Integration</p>
+                <p class="title-content">
+                  Smart solutions using AI-powered tools and automation.
+                </p>
+              </div>
+            </div>
+            <div class="card-service">
+              <img
+                src="../assets/images/Paint.png"
+                alt="Web"
+                class="card-icon"
+              />
+              <div>
+                <p class="title-card">UI/UX Design</p>
+                <p class="title-content">
+                  Clean and functional designs for better user experience.
+                </p>
+              </div>
+            </div>
+            <div class="card-service">
+              <img
+                src="../assets/images/Landing-Page.png"
+                alt="Web"
+                class="card-icon"
+              />
+              <div>
+                <p class="title-card">Landing Page Design</p>
+                <p class="title-content">
+                  High-converting landing pages for your product or business.
+                </p>
+              </div>
+            </div>
+            <div class="card-service">
+              <img src="../assets/images/CMS.png" alt="Web" class="card-icon" />
+              <div>
+                <p class="title-card">CMS Integration</p>
+                <p class="title-content">
+                  Easy-to-manage websites with WordPress or Webflow.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== OUR WORK ========== -->
+      <section class="our-work" id="our-work">
+        <div class="container-custom">
+          <div class="container-title">
+            <h2 class="text-h2">Our Work</h2>
+            <p class="text-sub">
+              See what we’ve built with passion and purpose
+            </p>
+          </div>
+
+          <div class="portfolio">
+            <div class="portfolio-item group">
+              <div class="card-portfolio">
+                <img
+                  src="../assets/images/img-portfolio-1.png"
+                  alt="portfolio"
+                  class="img-portfolio"
+                />
+              </div>
+              <p class="title-portfolio">Portofolio 1</p>
+            </div>
+
+            <div class="portfolio-item group">
+              <div class="card-portfolio">
+                <img
+                  src="../assets/images/img-portfolio-2.png"
+                  alt="portfolio"
+                  class="img-portfolio"
+                />
+              </div>
+              <p class="title-portfolio">Portofolio 2</p>
+            </div>
+
+            <div class="portfolio-item group">
+              <div class="card-portfolio">
+                <img
+                  src="../assets/images/img-portfolio-3.png"
+                  alt="portfolio"
+                  class="img-portfolio"
+                />
+              </div>
+              <p class="title-portfolio">Portofolio 3</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== MEET THE TEAM ========== -->
+      <section class="met-the-team" id="met-the-team">
+        <div class="container-custom">
+          <div class="container-title">
+            <h2 class="text-h2">Meet the Team</h2>
+            <p class="text-sub">A group of future-ready tech makers.</p>
+          </div>
+          <div class="team-member">
+            <div class="card-team-member">
+              <img
+                src="../assets/images/Ellipse-1.png"
+                alt="member"
+                class="img-member"
+              />
+              <div class="text-center">
+                <p class="name-member">Jasper Kim</p>
+                <p class="title-member">Project Manager</p>
+              </div>
+            </div>
+            <div class="card-team-member">
+              <img
+                src="../assets/images/Ellipse-2.png"
+                alt="member"
+                class="img-member"
+              />
+              <div class="text-center">
+                <p class="name-member">Alex Jonathan</p>
+                <p class="title-member">Full-stack Developer</p>
+              </div>
+            </div>
+            <div class="card-team-member">
+              <img
+                src="../assets/images/Ellipse-3.png"
+                alt="member"
+                class="img-member"
+              />
+              <div class="text-center">
+                <p class="name-member">Mario Lopez</p>
+                <p class="title-member">UI/UX Designer</p>
+              </div>
+            </div>
+            <div class="card-team-member">
+              <img
+                src="../assets/images/Ellipse-4.png"
+                alt="member"
+                class="img-member"
+              />
+              <div class="text-center">
+                <p class="name-member">Jasper Kim</p>
+                <p class="title-member">Data Scientist</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== CONTACT ========== -->
+      <section class="contact" id="contact">
+        <div class="contact-container container-custom">
+          <div class="contact-title">
+            <h2 class="text-h2">Let's Collaborate</h2>
+            <p class="text-sub">Need a tech team? We're ready to help</p>
+          </div>
+
+          <form class="contact-form">
+            <div class="input-fields">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" placeholder="Enter your name" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" placeholder="Enter your email" />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea placeholder="Enter your message"></textarea>
+              </div>
+            </div>
+            <button class="btn-send">Send</button>
+          </form>
+        </div>
+      </section>
+    </main>
 
     <!-- ========== FOOTER ========== -->
+    <footer class="footer-container">
+      <p>© 2025 Web Programming Hack. All rights reserved.</p>
+    </footer>
+    <script>
+      const btnOpen = document.getElementById('hamburger-btn');
+      const btnClose = document.getElementById('close-btn');
+      const menu = document.getElementById('mobile-menu');
+      const links = document.querySelectorAll('.mobile-link');
+
+      // Membuka menu
+      btnOpen.onclick = () => {
+        menu.classList.add('active'); // Menambah class active
+        document.body.style.overflow = 'hidden';
+      };
+
+      // Menutup menu
+      btnClose.onclick = () => {
+        menu.classList.remove('active'); // Menghapus class active
+        document.body.style.overflow = 'auto';
+      };
+
+      // Menutup menu saat link diklik
+      links.forEach((l) => {
+        l.onclick = () => {
+          menu.classList.remove('active');
+          document.body.style.overflow = 'auto';
+        };
+      });
+    </script>
   </body>
 </html>
