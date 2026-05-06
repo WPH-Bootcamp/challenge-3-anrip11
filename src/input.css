@@ -1,1 +1,237 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme {
+  /* Global Font */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  /* Variabel Warna */
+  --color-primary: #421abc;
+  --color-base-1: #ffffff;
+  --color-base-2: #000000;
+  --color-neutral-25: #fdfdfd;
+  --color-neutral-500: #717680;
+  --color-neutral-800: #252b37;
+  --color-neutral-900: #181d27;
+}
+
+@layer components {
+  .container-custom {
+    @apply mx-auto w-full max-w-[1440px] px-5 lg:px-[140px];
+  }
+  .container-title {
+    @apply mb-16 flex flex-col gap-4;
+  }
+  .text-h1 {
+    @apply text-neutral-25;
+  }
+  .text-h2 {
+    @apply text-[28px] md:text-[40px] font-bold text-neutral-25;
+  }
+  .text-h3 {
+    @apply max-w-[1160px] mx-auto text-lg md:text-[32px] font-semibold leading-relaxed text-neutral-25;
+  }
+  .text-sub {
+    @apply text-lg text-neutral-500;
+  }
+  /* ============== HEADER ============== */
+
+  /* ===== NAVBAR ===== */
+  .nav-header {
+    @apply w-full bg-base-2 h-[64px] md:h-[84px] flex items-center;
+  }
+  .nav-container {
+    @apply flex justify-between items-center w-full;
+  }
+  .nav-logo {
+    @apply flex items-center justify-start w-[160px] h-[36px] md:justify-center;
+  }
+  .nav-logo span {
+    @apply text-2xl font-bold text-neutral-25;
+  }
+  .menu {
+    @apply hidden md:flex gap-1.5;
+  }
+  .nav-link {
+    @apply px-4 py-2 text-sm text-neutral-25;
+  }
+  .contact-btn {
+    @apply hidden md:block;
+  }
+  .btn-contact {
+    @apply flex items-center justify-center w-[160px] h-[44px] bg-primary text-base-1 rounded-full text-sm font-semibold transition;
+  }
+
+  /* MENU HAMBURGER BUTTON */
+
+  .hamburger-btn {
+    @apply md:hidden cursor-pointer;
+  }
+  .hamburger-icon {
+    @apply w-6 h-auto;
+  }
+  /* Container Utama Mobile Menu */
+  #mobile-menu {
+    @apply fixed inset-0 bg-black z-[9999] flex flex-col p-4 md:hidden;
+    @apply transition-transform duration-300 ease-in-out;
+    /* Posisi awal: Tersembunyi di kanan */
+    @apply translate-x-full;
+  }
+
+  /* State ketika menu AKTIF */
+  #mobile-menu.active {
+    @apply translate-x-0;
+  }
+
+  /* Styling tambahan untuk elemen di dalamnya agar rapi */
+  .mobile-nav-container {
+    @apply flex justify-between items-center mb-4;
+  }
+
+  .mobile-link-wrapper {
+    @apply flex flex-col items-center gap-1 w-full;
+  }
+
+  .mobile-link {
+    @apply text-[14px] w-full max-w-[361px] py-2 text-neutral-25;
+  }
+
+  .btn-mobile-contact {
+    @apply mt-4 flex items-center justify-center w-full max-w-[361px] h-[48px] bg-primary text-white rounded-full font-semibold;
+  }
+
+  /* ============== MAIN ============== */
+
+  /* ===== HERO ===== */
+  .hero {
+    @apply relative w-full min-h-[720px] md:h-[750px] bg-gradient-to-b from-base-2 to-[#210a5e] overflow-hidden pt-10 md:pt-0 flex items-center;
+  }
+  .hero-container {
+    @apply flex flex-col md:flex-row justify-between items-center relative h-full w-full;
+  }
+  .hero-content {
+    @apply max-w-[687px] z-10 md:text-left;
+  }
+  .hero-content h1 {
+    @apply text-4xl md:text-[56px] font-bold leading-tight md:leading-[68px] mb-4 tracking-tight;
+  }
+  .hero-content p {
+    @apply text-base md:text-xl text-neutral-500 leading-relaxed mb-8 md:mb-12;
+  }
+  .hero-content a {
+    @apply inline-flex items-center justify-center w-full md:w-[300px] h-12 bg-primary rounded-full font-semibold text-base-1;
+  }
+  .hero-image {
+    @apply w-full max-w-[595px] mt-8 md:mt-0 self-end flex items-end;
+  }
+  .hero-image img {
+    @apply w-full h-auto block;
+  }
+
+  /* ===== WHO WE ARE ===== */
+  .who-we-are {
+    @apply py-10 md:py-20 bg-base-2 text-center;
+  }
+  .who-we-are-container {
+    @apply flex flex-col gap-8;
+  }
+  .who-we-are-container span {
+    @apply text-neutral-500;
+  }
+
+  /* ===== WHAT WE DO ===== */
+  .what-we-do {
+    @apply py-10 md:py-20 bg-base-2 text-center;
+  }
+  .service {
+    @apply grid grid-cols-2 lg:grid-cols-3 gap-5;
+  }
+  .card-service {
+    @apply p-6 border border-neutral-900 rounded-xl flex flex-col items-center gap-5;
+  }
+  .card-icon {
+    @apply w-12 h-12;
+  }
+  .title-card {
+    @apply font-bold text-xl text-neutral-25 mb-2;
+  }
+  .title-content {
+    @apply text-neutral-500 text-sm leading-relaxed;
+  }
+
+  /* ===== OUR WORK ===== */
+  .our-work {
+    @apply py-10 md:py-20 bg-base-2 text-center;
+  }
+  .portfolio {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center;
+  }
+  .portfolio-item {
+    @apply w-full flex flex-col gap-5;
+  }
+  .card-portfolio {
+    @apply overflow-hidden rounded-xl;
+  }
+  .img-portfolio {
+    @apply w-full h-auto block transform;
+  }
+  .title-portfolio {
+    @apply text-left text-xl font-bold text-neutral-25 leading-relaxed tracking-tight;
+  }
+
+  /* ===== MEET THE TEAM ===== */
+  .met-the-team {
+    @apply py-10 md:py-20 bg-base-2 text-center;
+  }
+  .team-member {
+    @apply grid grid-cols-2 lg:grid-cols-4 gap-5 max-w-[1160px] mx-auto;
+  }
+  .card-team-member {
+    @apply flex flex-col items-center gap-5;
+  }
+  .img-member {
+    @apply w-40 h-40 md:w-[220px] md:h-[220px];
+  }
+  .name-member {
+    @apply text-xl font-bold text-neutral-25;
+  }
+  .title-member {
+    @apply text-neutral-500;
+  }
+
+  /* ===== CONTACT ===== */
+  .contact {
+    @apply py-10 md:py-20 bg-base-2 flex flex-col items-center;
+  }
+  .contact-container {
+    @apply w-full flex flex-col items-center;
+  }
+  .contact-title {
+    @apply mb-16 text-center flex flex-col gap-4;
+  }
+  .contact-form {
+    @apply w-full max-w-[592px] flex flex-col gap-10;
+  }
+  .input-fields {
+    @apply flex flex-col gap-5 text-left;
+  }
+  .form-group {
+    @apply flex flex-col gap-1.5;
+  }
+  .form-group label {
+    @apply font-bold text-sm text-neutral-25;
+  }
+  .form-group input {
+    @apply w-full bg-transparent border border-neutral-800 rounded-xl px-4 py-2 outline-none text-base-1;
+  }
+  .form-group textarea {
+    @apply w-full bg-transparent border border-neutral-800 rounded-xl px-4 py-2 h-[134px] resize-none outline-none text-base-1;
+  }
+  .btn-send {
+    @apply w-full h-12 bg-primary text-white rounded-full font-semibold cursor-pointer;
+  }
+
+  /* ============== FOOTER ============== */
+  .footer-container {
+    @apply border-t border-neutral-900 py-6 bg-base-2 text-center text-neutral-500 text-sm;
+  }
+}
